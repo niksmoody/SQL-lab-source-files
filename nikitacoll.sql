@@ -1,0 +1,12 @@
+CREATE TABLE library (studentname VARCHAR(20), regno NUMBER(20), address VARCHAR2(20));
+DROP TABLE library;
+CREATE TABLE library (username VARCHAR(20), user_id VARCHAR(10) PRIMARY KEY, address VARCHAR(20), phone_number NUMBER(20));
+ALTER TABLE library ADD (email VARCHAR(30));
+DROP TABLE library;
+CREATE TABLE bookpeople (username VARCHAR(20), user_id VARCHAR(10) PRIMARY KEY, address VARCHAR(20), phone_number NUMBER(20));
+ALTER TABLE bookpeople ADD (email VARCHAR(30));
+--ALTER TABLE bookpeople ADD(CONSTRAINT FK_bookpeople_books FOREIGN KEY (book_id) REFERENCES book(book_id));
+CREATE TABLE book (book_id VARCHAR(30)PRIMARY KEY);
+ALTER TABLE book ADD(title VARCHAR(30), author VARCHAR(30), no_of_copies NUMBER(30));
+ALTER TABLE book ADD(price DECIMAL(10, 2));
+--CREATE TABLE DOI ( FOREIGN KEY (user_id) REFERENCES bookpeople(user_id));
